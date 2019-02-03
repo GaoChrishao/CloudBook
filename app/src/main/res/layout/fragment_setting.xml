@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:id="@+id/fragment_theme_layout1"
+                android:background="@drawable/background_untranscened"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:padding="15dp">
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:text="1.自定义背景图片"
+                    android:textColor="@color/colorText"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:layout_gravity="center_horizontal"
+                        android:id="@+id/theme_chooseBG"
+                        android:textColor="@color/colorText"
+                        android:background="@drawable/background_yuanjiao_btn"
+                        android:layout_marginRight="35dp"
+                        android:text="选择"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:layout_gravity="center_horizontal"
+                        android:id="@+id/theme_cancelBG"
+                        android:textColor="@color/colorText"
+                        android:background="@drawable/background_yuanjiao_btn"
+                        android:text="清除"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/fragment_theme_layout2"
+                android:background="@drawable/background_untranscened"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:padding="15dp">
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:text="2.开启毛玻璃效果"
+                    android:textColor="@color/colorText"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Switch
+                    android:layout_gravity="center"
+                    android:id="@+id/config_theme_switch_blur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/fragment_theme_layout3"
+                android:background="@drawable/background_untranscened"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:padding="15dp"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:text="3.修改用户名和密码"
+                    android:textColor="@color/colorText"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:hint="名称"
+                    android:textColorHint="#747474"
+                    android:textColor="#bcbcbc"
+                    android:id="@+id/setting_username"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/setting_pwd"
+                    android:hint="密码"
+                    android:textColorHint="#747474"
+                    android:textColor="#bcbcbc"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    />
+                <Button
+                    android:id="@+id/setting_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_yuanjiao_btn"
+                    android:text="确定"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/fragment_theme_layout4"
+                android:background="@drawable/background_untranscened"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:padding="15dp">
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:text="4.自定义用户头像"
+                    android:textColor="@color/colorText"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/theme_chooseUserPc"
+                    android:textColor="@color/colorText"
+                    android:background="@drawable/background_yuanjiao_btn"
+                    android:text="选择"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

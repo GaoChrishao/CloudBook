@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WriteActivity"
+    android:orientation="vertical"
+    android:background="@drawable/bkg_login_blur_dark"
+    android:padding="15dp"
+    android:id="@+id/write_layout_main"
+    >
+
+    <EditText
+        android:id="@+id/write_et_bookid"
+        android:hint="书籍id(无则无需填写)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_yuanjiao_btn"
+        android:padding="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:inputType="number"
+        />
+    <EditText
+        android:layout_marginTop="15dp"
+        android:id="@+id/write_et_bookname"
+        android:background="@drawable/background_yuanjiao_btn"
+        android:hint="书籍名"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/write_et_bookid"
+        android:inputType="text"
+        />
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/write_et_bookname"
+        android:layout_above="@+id/write_layout"
+        android:padding="15dp"
+        android:orientation="vertical"
+        android:background="@drawable/background_yuanjiao_btn"
+        >
+        <EditText
+            android:id="@+id/write_et_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="                                 内容"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/write_layout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        >
+
+        <Button
+            android:text="确定"
+            android:id="@+id/write_btn_yes"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_yuanjiao_btn_grey"
+            />
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>
