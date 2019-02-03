@@ -1,0 +1,111 @@
+apply plugin: 'com.android.application'
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+repositories {
+    maven {
+        url 'https://oss.sonatype.org/content/repositories/snapshots'
+    }
+}
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "cloudbook.gaoch.com"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 102
+        versionName "1.0.2"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    //签名
+    signingConfigs {
+        debug {
+
+        }
+        release {// 自己的签名文件
+            storeFile file("C:\\Users\\GaoCh\\Desktop\\GCH\\makeapp.jks")
+            storePassword "adh552200ily."
+            keyAlias "key0"
+            keyPassword "asdbjasdhaca21"
+        }
+    }
+    buildTypes {
+        debug {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            versionNameSuffix "-debug"
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
+        }
+        release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //混淆
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+
+
+
+            // 移除无用的resource文件
+            shrinkResources true
+            //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明，后一个文件是自己的定义混淆文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //签名
+            signingConfig signingConfigs.release
+
+//            applicationVariants.all { variant ->
+//                variant.outputs.each { output ->
+//                    def outputFile = output.outputFile
+//                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                        // 输出apk名称为app_v1.0_2015-xx-xx_xxxx.apk
+//                        //def fileName = "app_v${defaultConfig.versionName}_${releaseTime()}.apk"
+//                        def fileName = "app_v${defaultConfig.versionName}_${variant.productFlavors[0].name}.apk"
+//                        output.outputFile = new File(outputFile.parent, fileName)
+//                    }
+//                }
+//            }
+        }
+    }
+
+    //渠道Flavors，配置不同风格的app,友盟渠道统计时用到
+//    productFlavors {
+//        "offical" {}
+//        "360" {}
+//        yingyongbao {}
+//        wandoujia {}
+//        baidu {}
+//        "91" {}
+//    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        //abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-v4:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:recyclerview-v7:28.0.0-rc02'
+    implementation 'com.github.yuzhiqiang1993:zxing:2.2.1'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.android.support:palette-v7:28.0.0'
+    implementation 'commons-net:commons-net:3.5'
+    implementation 'com.github.castorflex.verticalviewpager:library:19.0.1'
+    implementation 'com.android.support:support-annotations:28.0.0'
+
+}

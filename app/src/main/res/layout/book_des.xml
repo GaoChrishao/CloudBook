@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BookActivity"
+    android:background="#ffffff"
+    >
+
+    <LinearLayout
+        android:id="@+id/scan_book_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+
+        android:paddingTop="30dp"
+        >
+
+        <ImageView
+            android:id="@+id/scan_book_pic"
+            android:layout_width="100dp"
+            android:layout_height="141dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            ></ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/scan_book_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="《三体》"
+                    android:textColor="@color/bookDesTextColot"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/scan_book_writer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="刘慈欣"
+                    android:textColor="@color/bookDesTextColot" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/scan_book_des"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:scrollbars="vertical"
+                android:text="@string/book_des"
+                android:textColor="@color/bookDesTextColot"
+                android:textSize="10sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/scan_book_btnlike"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/ic_like" />
+
+                <TextView
+                    android:id="@+id/scan_book_likes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="15"
+                    android:textColor="@color/bookDesTextColot"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_comment" />
+
+                <TextView
+                    android:id="@+id/scan_book_comments"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="15"
+                    android:textColor="@color/bookDesTextColot"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_rmb" />
+
+                <TextView
+                    android:id="@+id/scan_book_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="23.99"
+                    android:textColor="@color/bookDesTextColot"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="2dp"
+                    />
+                <Button
+                    android:id="@+id/scan_book_btnadd"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/ic_store"
+                    />
+                <TextView
+                    android:id="@+id/scan_book_buynumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="23.99"
+                    android:textColor="@color/bookDesTextColot"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="2dp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/book_swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/scan_book_main"
+        android:layout_above="@+id/book_send"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/scan_book_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ></android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/book_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        >
+
+        <EditText
+            android:id="@+id/book_ev_cmt"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:background="@drawable/background_yuanjiao_btn_grey"
+            android:textColor="#4d4d4d"
+            android:textColorHint="#4d4d4d"
+            android:padding="10dp"
+            android:hint="此处输入评论"
+            android:layout_marginRight="5dp"
+            />
+
+        <Button
+            android:id="@+id/book_btn_cmt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:background="@drawable/background_yuanjiao_btn_grey"
+            android:textColor="#4d4d4d"
+            android:text="评论" />
+    </LinearLayout>
+
+</RelativeLayout>

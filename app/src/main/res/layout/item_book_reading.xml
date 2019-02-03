@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".BookActivity"
+    android:padding="5dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="130dp"
+        android:layout_height="183dp"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:gravity="bottom"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/mybook_pic"
+            android:background="@drawable/book_pic_default"
+            />
+        <LinearLayout
+            android:id="@+id/mybook_words_bkg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#bfffffff"
+            android:padding="5dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            >
+            <TextView
+                android:id="@+id/mybook_name"
+                android:text="《三体》"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:id="@+id/mybook_hasread"
+                android:text="已读:30%"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

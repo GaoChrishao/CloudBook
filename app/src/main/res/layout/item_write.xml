@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="15dp"
+    >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="《三体》"
+            android:textSize="20sp"
+            android:id="@+id/write_bookName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="时间"
+            android:textSize="15sp"
+            android:id="@+id/write_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/write_content"
+            android:textSize="15sp"
+            android:text="善有两面，一是人类的美，一是人类的脆弱。在人类范畴内，善是毋庸置疑的，是值得尊敬的；但《三体》的框架是宇宙、生命等终极命题，善的美就不起作用了，脆弱便被凸显出来。"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#89ffffff"
+        >
+    </LinearLayout>
+
+</LinearLayout>
