@@ -1,8 +1,8 @@
 package cloudbook.gaoch.com;
 
 public class ConstValue {
-    public static String serverIp ="149.28.15.40";   //149.28.15.40
-    public static String serverUserPic ="http://gcloudpan.tk/user/";
+    public static String serverIp ="101.132.181.104";   //149.28.15.40
+    public static String serverUserPic ="http://101.132.181.104/cloudbook/user/";
     public static int serverPortLogin=1196;
     public static int serverPortSignUp=1197;
     public static int serverPortBook=1198;

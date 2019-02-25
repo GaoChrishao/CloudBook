@@ -71,10 +71,10 @@ public class FTP {
 	}
 
 	public FTP() {
-		this.hostName = "149.28.15.40";
+		this.hostName = "101.132.181.104";
 		this.serverPort = 21;
-		this.userName = "userpic";
-		this.password = "1195593460";
+		this.userName = "cloudbook";
+		this.password = "tGcaHsE4b38KGTBD";
 		this.ftpClient = new FTPClient();
 	}
 
